@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Patient App</string>
+    <string name="text_label">My Patient App</string>
+</resources>

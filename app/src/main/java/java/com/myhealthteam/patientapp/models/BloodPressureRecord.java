@@ -1,0 +1,25 @@
+package java.com.myhealthteam.patientapp.models;
+
+public class BloodPressureRecord {
+    private String reading;
+    private String measuredAt;
+    private String status;
+
+    public BloodPressureRecord(String reading, String measuredAt, String status) {
+        this.reading = reading;
+        this.measuredAt = measuredAt;
+        this.status = status;
+    }
+
+    public String getReading() {
+        return reading;
+    }
+
+    public String getMeasuredAt() {
+        return measuredAt;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+}

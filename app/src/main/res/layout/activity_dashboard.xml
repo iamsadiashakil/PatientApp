@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.DashboardActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/toolbar_bg_color"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Patient App"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+
+        <!-- Profile Icon -->
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/user"
+            android:contentDescription="Profile Icon"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <GridLayout
+                android:id="@+id/dashboardGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="4"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBloodPressure"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dashboard_card_height"
+                    android:layout_columnWeight="1"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="6dp"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/blood_pressure"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:text="Blood Pressure"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:id="@+id/bloodPressureReading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="120/80 mmHg"
+                            android:textSize="14sp"
+                            android:textColor="#666"
+                            android:layout_marginTop="1dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPulseRate"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dashboard_card_height"
+                    android:layout_columnWeight="1"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="6dp"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/pulse"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"
+                            android:text="Pulse Rate"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/pulseReading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"
+                            android:text="76 bpm"
+                            android:textColor="#666"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSugarLevel"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dashboard_card_height"
+                    android:layout_columnWeight="1"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="6dp"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/sugar"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:text="Sugar Level"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"/>
+
+                        <TextView
+                            android:id="@+id/sugarLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"
+                            android:text="95 mg/dl"
+                            android:textColor="#666"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBloodOxygen"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dashboard_card_height"
+                    android:layout_columnWeight="1"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="6dp"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/oxygen"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:text="Blood Oxygen Level"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:id="@+id/bloodOxygenReading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="97%"
+                            android:textSize="14sp"
+                            android:textColor="#666"
+                            android:layout_marginTop="1dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBodyTemperature"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dashboard_card_height"
+                    android:layout_columnWeight="1"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="6dp"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/body_temperature"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"
+                            android:text="Body Temperature"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bodyTemperatureReading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"
+                            android:text="98.6°F"
+                            android:textColor="#666"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardAllergies"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dashboard_card_height"
+                    android:layout_columnWeight="1"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="6dp"
+                    android:layout_margin="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/allergic"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp" />
+
+                        <TextView
+                            android:text="Allergies"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp" />
+
+                        <!-- Existing allergy -->
+                        <TextView
+                            android:id="@+id/allergies"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"
+                            android:text="Penicillin"
+                            android:textColor="#666"
+                            android:textSize="14sp" />
+
+                        <!-- Indicating more allergies -->
+                        <TextView
+                            android:id="@+id/more_allergies"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="2dp"
+                            android:text="4 more allergies"
+                            android:textColor="#FF5722"
+                            android:textSize="14sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- Continue similarly for Body Temperature, Blood Oxygen, Allergies, Message Doctor -->
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Chat Button"
+        android:src="@drawable/chat"
+        app:backgroundTint="@color/toolbar_bg_color"
+        app:tint="@color/white" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

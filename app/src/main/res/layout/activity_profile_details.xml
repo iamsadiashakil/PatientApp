@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/toolbar_bg_color"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/back"
+            android:contentDescription="Back Button"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/top_bar_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp" />
+
+        <!-- Edit Profile Icon -->
+        <ImageView
+            android:id="@+id/edit_profile_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/pencil_1"
+            android:contentDescription="Edit Profile Icon"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Merged Caretaker Information & Contact Details Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Caretaker Name -->
+                    <TextView
+                        android:id="@+id/caretaker_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Amna Shakil"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Caretaker Details -->
+                    <TextView
+                        android:id="@+id/caretaker_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Relationship: Sister\nDOB: June 15, 1990      |      Age: 34\nGender: Female"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="#757575"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Contact Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/telephone_call"
+                            android:contentDescription="Phone Icon" />
+
+                        <TextView
+                            android:id="@+id/caretaker_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Contact: +92 301 9876543"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"
+                            android:textColor="#212121" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/email"
+                            android:contentDescription="Email Icon" />
+
+                        <TextView
+                            android:id="@+id/caretaker_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Email: sadia.guardian@email.com"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"
+                            android:textColor="#212121" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Patient Details Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Patient Information -->
+                    <TextView
+                        android:id="@+id/patient_info_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Patient Information"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/patient_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name: Sadia Shakil"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/patient_mrn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MRN: 0023456"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/patient_dob_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DOB: May 30, 1996      |      Gender: Female"
+                        android:textSize="14sp"
+                        android:textColor="#757575" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/logout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/toolbar_bg_color"
+                android:text="Log Out"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
