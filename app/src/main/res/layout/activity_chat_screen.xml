@@ -58,6 +58,6 @@
         android:layout_margin="16dp"
         android:src="@drawable/new_message"
         android:contentDescription="New Chat"
-        app:backgroundTint="@color/button_color"
+        app:backgroundTint="@color/toolbar_bg_color"
         app:tint="@color/white" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
