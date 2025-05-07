@@ -1,0 +1,11 @@
+# Exclude XML layout files from stats
+*.xml linguist-vendored
+
+# Exclude auto-generated files and folders
+build/* linguist-vendored
+.gradle/* linguist-vendored
+.idea/* linguist-vendored
+
+# Force classify Java and Kotlin files
+*.java linguist-language=Java
+*.kt linguist-language=Kotlin
