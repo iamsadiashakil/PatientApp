@@ -33,12 +33,20 @@ The **Patient App** is a healthcare management application designed to assist ca
 5. Run the app on an emulator or Android device.
 
 ## Screenshots
-![login screen](https://github.com/user-attachments/assets/fcb1794a-c34b-4fd7-aae8-1a695b828f75)
-![Dashboard screen](https://github.com/user-attachments/assets/a622cc66-d93b-472f-b7b2-efec814ca6ab)
-![vitals history screen](https://github.com/user-attachments/assets/067a6bdf-e047-480f-9865-f1b27d54d2c7)
-![chats screen](https://github.com/user-attachments/assets/d985732a-f51c-4fed-bd77-27f67244ec1c)
-![chat detail screen](https://github.com/user-attachments/assets/7a0ecede-ec90-4438-bcd1-93a9b476c731)
-![Profile screen](https://github.com/user-attachments/assets/6e60f8e7-3ef6-426f-99ef-480ae0cdaba0)
+### Splash & Login
+<img src="https://github.com/user-attachments/assets/b4dcaa8b-ef67-4d0e-932e-a63adc45ae1b" alt="Splash Screen" width="250"/>
+<img src="https://github.com/user-attachments/assets/fcb1794a-c34b-4fd7-aae8-1a695b828f75" alt="Login Screen" width="250"/>
+
+### Health Records
+<img src="https://github.com/user-attachments/assets/a622cc66-d93b-472f-b7b2-efec814ca6ab" alt="Dashboard Screen" width="250"/>
+<img src="https://github.com/user-attachments/assets/067a6bdf-e047-480f-9865-f1b27d54d2c7" alt="Vitals History Screen" width="250"/>
+
+### Messaging
+<img src="https://github.com/user-attachments/assets/d985732a-f51c-4fed-bd77-27f67244ec1c" alt="Chats Screen" width="250"/>
+<img src="https://github.com/user-attachments/assets/7a0ecede-ec90-4438-bcd1-93a9b476c731" alt="Chat Detail Screen" width="250"/>
+
+### Profile
+<img src="https://github.com/user-attachments/assets/6e60f8e7-3ef6-426f-99ef-480ae0cdaba0" alt="Profile Screen" width="250"/>
 
 
 ## Contact
