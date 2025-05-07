@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3f16f56b-959f-4f17-b638-cd41bc9e7ee9)# Patient App
+# Patient App
 
 The **Patient App** is a healthcare management application designed to assist caretakers in managing the health and well-being of their patients. The app enables caretakers to seamlessly communicate with healthcare professionals and access medical records, ensuring that patients receive the best possible care.
 
@@ -35,6 +35,7 @@ The **Patient App** is a healthcare management application designed to assist ca
 ## Screenshots
 ![login screen](https://github.com/user-attachments/assets/fcb1794a-c34b-4fd7-aae8-1a695b828f75)
 ![Dashboard screen](https://github.com/user-attachments/assets/a622cc66-d93b-472f-b7b2-efec814ca6ab)
+![vitals history screen](https://github.com/user-attachments/assets/067a6bdf-e047-480f-9865-f1b27d54d2c7)
 ![chats screen](https://github.com/user-attachments/assets/d985732a-f51c-4fed-bd77-27f67244ec1c)
 ![chat detail screen](https://github.com/user-attachments/assets/7a0ecede-ec90-4438-bcd1-93a9b476c731)
 ![Profile screen](https://github.com/user-attachments/assets/6e60f8e7-3ef6-426f-99ef-480ae0cdaba0)
