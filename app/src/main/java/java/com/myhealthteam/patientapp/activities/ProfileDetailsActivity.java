@@ -28,5 +28,11 @@ public class ProfileDetailsActivity extends Activity {
             startActivity(intent);
             finish();
         });
+
+        ImageView editButton = findViewById(R.id.edit_profile_button);
+        editButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileDetailsActivity.this, EditProfileActivity.class);
+            startActivity(intent);
+        });
     }
 }

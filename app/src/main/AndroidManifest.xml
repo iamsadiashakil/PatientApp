@@ -22,8 +22,9 @@
         <activity android:name=".activities.ForgotPasswordActivity" />
         <activity android:name=".activities.CreateAccountActivity" />
         <activity android:name=".activities.DashboardActivity" />
-        <activity android:name=".activities.ProfileDetailsActivity" />
         <activity android:name=".activities.BloodPressureHistoryActivity" />
+        <activity android:name=".activities.ProfileDetailsActivity" />
+        <activity android:name=".activities.EditProfileActivity" />
         <activity android:name=".activities.ChatScreenActivity" />
         <activity android:name=".activities.ChatDetailActivity" />
     </application>

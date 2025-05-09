@@ -41,7 +41,7 @@
 
         <!-- Edit Profile Icon -->
         <ImageView
-            android:id="@+id/edit_profile_icon"
+            android:id="@+id/edit_profile_button"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@drawable/pencil_1"
