@@ -19,7 +19,6 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
 
-        <!-- App Name -->
         <TextView
             android:id="@+id/app_name"
             android:layout_width="0dp"
@@ -30,7 +29,6 @@
             android:textStyle="bold"
             android:layout_weight="1" />
 
-        <!-- Profile Icon -->
         <ImageView
             android:id="@+id/profile_icon"
             android:layout_width="40dp"
@@ -42,315 +40,389 @@
     </LinearLayout>
 
     <!-- Main Content -->
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
-        android:padding="8dp">
+        android:layout_marginTop="56dp">
 
-        <LinearLayout
+        <GridLayout
+            android:id="@+id/dashboardGrid"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:layout_height="0dp"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <GridLayout
-                android:id="@+id/dashboardGrid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:rowCount="4"
-                android:alignmentMode="alignMargins"
-                android:useDefaultMargins="true">
+            <!-- Blood Pressure Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBloodPressure"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="6dp">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardBloodPressure"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/dashboard_card_height"
-                    android:layout_columnWeight="1"
-                    card_view:cardCornerRadius="16dp"
-                    card_view:cardElevation="6dp"
-                    android:layout_margin="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
+                    <!-- Image container with weight for proper distribution -->
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
 
                         <ImageView
-                            android:src="@drawable/blood_pressure"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"/>
-
-                        <TextView
-                            android:text="Blood Pressure"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"
-                            android:layout_marginTop="8dp"/>
-
-                        <TextView
-                            android:id="@+id/bloodPressureReading"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="120/80 mmHg"
-                            android:textSize="14sp"
-                            android:textColor="#666"
-                            android:layout_marginTop="1dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"/>
-
+                            android:padding="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/blood_pressure"/>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardPulseRate"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/dashboard_card_height"
-                    android:layout_columnWeight="1"
-                    card_view:cardCornerRadius="16dp"
-                    card_view:cardElevation="6dp"
-                    android:layout_margin="8dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Blood Pressure"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:paddingHorizontal="4dp"/>
+
+                    <TextView
+                        android:id="@+id/bloodPressureReading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="120/80 mmHg"
+                        android:textSize="17sp"
+                        android:textColor="#666"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Pulse Rate Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPulseRate"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
 
                         <ImageView
-                            android:src="@drawable/pulse"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"
-                            android:text="Pulse Rate"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/pulseReading"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="1dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"
-                            android:text="76 bpm"
-                            android:textColor="#666"
-                            android:textSize="14sp" />
-
+                            android:padding="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/pulse"/>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardSugarLevel"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/dashboard_card_height"
-                    android:layout_columnWeight="1"
-                    card_view:cardCornerRadius="16dp"
-                    card_view:cardElevation="6dp"
-                    android:layout_margin="8dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pulse Rate"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"/>
+
+                    <TextView
+                        android:id="@+id/pulseReading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="76 bpm"
+                        android:textSize="17sp"
+                        android:textColor="#666"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Sugar Level Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSugarLevel"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
 
                         <ImageView
-                            android:src="@drawable/sugar"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"/>
-
-                        <TextView
-                            android:text="Sugar Level"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"/>
-
-                        <TextView
-                            android:id="@+id/sugarLevel"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="1dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"
-                            android:text="95 mg/dl"
-                            android:textColor="#666"
-                            android:textSize="14sp" />
-
+                            android:padding="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sugar"/>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardBloodOxygen"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/dashboard_card_height"
-                    android:layout_columnWeight="1"
-                    card_view:cardCornerRadius="16dp"
-                    card_view:cardElevation="6dp"
-                    android:layout_margin="8dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sugar Level"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"/>
+
+                    <TextView
+                        android:id="@+id/sugarLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="95 mg/dl"
+                        android:textSize="17sp"
+                        android:textColor="#666"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Blood Oxygen Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBloodOxygen"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
 
                         <ImageView
-                            android:src="@drawable/oxygen"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"/>
-
-                        <TextView
-                            android:text="Blood Oxygen Level"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"
-                            android:layout_marginTop="8dp"/>
-
-                        <TextView
-                            android:id="@+id/bloodOxygenReading"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="97%"
-                            android:textSize="14sp"
-                            android:textColor="#666"
-                            android:layout_marginTop="1dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"/>
-
+                            android:padding="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/oxygen"/>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardBodyTemperature"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/dashboard_card_height"
-                    android:layout_columnWeight="1"
-                    card_view:cardCornerRadius="16dp"
-                    card_view:cardElevation="6dp"
-                    android:layout_margin="8dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Blood Oxygen"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"/>
+
+                    <TextView
+                        android:id="@+id/bloodOxygenReading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="97%"
+                        android:textSize="17sp"
+                        android:textColor="#666"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Body Temperature Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBodyTemperature"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
 
                         <ImageView
-                            android:src="@drawable/body_temperature"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"
-                            android:text="Body Temperature"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/bodyTemperatureReading"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="1dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"
-                            android:text="98.6°F"
-                            android:textColor="#666"
-                            android:textSize="14sp" />
-
+                            android:padding="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/body_temperature"/>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardAllergies"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/dashboard_card_height"
-                    android:layout_columnWeight="1"
-                    card_view:cardCornerRadius="16dp"
-                    card_view:cardElevation="6dp"
-                    android:layout_margin="8dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Body Temperature"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"/>
+
+                    <TextView
+                        android:id="@+id/bodyTemperatureReading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="98.6°F"
+                        android:textSize="17sp"
+                        android:textColor="#666"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Allergies Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAllergies"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
                     <LinearLayout
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
 
                         <ImageView
-                            android:src="@drawable/allergic"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp" />
-
-                        <TextView
-                            android:text="Allergies"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:layout_marginTop="8dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp" />
+                            android:adjustViewBounds="true"
+                            android:padding="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/allergic" />
+                    </LinearLayout>
 
-                        <!-- Existing allergy -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingHorizontal="4dp"
+                        android:text="Allergies"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
                         <TextView
                             android:id="@+id/allergies"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="1dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"
+                            android:gravity="start"
+                            android:maxLines="1"
+                            android:paddingHorizontal="4dp"
                             android:text="Penicillin"
                             android:textColor="#666"
-                            android:textSize="14sp" />
+                            android:textSize="17sp" />
 
-                        <!-- Indicating more allergies -->
                         <TextView
                             android:id="@+id/more_allergies"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:paddingHorizontal="7dp"
-                            android:paddingVertical="2dp"
-                            android:text="4 more allergies"
-                            android:textColor="#FF5722"
-                            android:textSize="14sp"
-                            android:textStyle="italic" />
+                            android:gravity="start"
+                            android:maxLines="1"
+                            android:paddingEnd="4dp"
+                            android:text="(+4)"
+                            android:textColor="#FF8400"
+                            android:textSize="17sp" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <!-- Continue similarly for Body Temperature, Blood Oxygen, Allergies, Message Doctor -->
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </GridLayout>
-        </LinearLayout>
-    </ScrollView>
     <!-- Floating Action Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
+        android:layout_margin="5dp"
         android:contentDescription="Chat Button"
         android:src="@drawable/chat"
         app:backgroundTint="@color/toolbar_bg_color"
