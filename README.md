@@ -38,7 +38,7 @@ The **Patient App** is a healthcare management application designed to assist ca
 <img src="https://github.com/user-attachments/assets/fcb1794a-c34b-4fd7-aae8-1a695b828f75" alt="Login Screen" width="250"/>
 
 ### Health Records
-<img src="https://github.com/user-attachments/assets/a622cc66-d93b-472f-b7b2-efec814ca6ab" alt="Dashboard Screen" width="250"/>
+<img src="https://github.com/user-attachments/assets/e355fe55-c78b-4668-9c37-f46109237f99" alt="Dashboard Screen" width="250"/>
 <img src="https://github.com/user-attachments/assets/067a6bdf-e047-480f-9865-f1b27d54d2c7" alt="Vitals History Screen" width="250"/>
 
 ### Messaging
