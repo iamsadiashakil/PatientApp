@@ -67,4 +67,34 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:minHeight="48dp" />
+
+    <!-- Forgot Password -->
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Forgot Password?"
+        android:textColor="@color/toolbar_bg_color"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Create New Account -->
+    <TextView
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Create New Account"
+        android:textColor="@color/toolbar_bg_color"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true" />
 </LinearLayout>

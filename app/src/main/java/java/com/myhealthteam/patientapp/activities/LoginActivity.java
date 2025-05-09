@@ -11,9 +11,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.content.ContextCompat;
+
 public class LoginActivity extends Activity {
 
-    private TextView logTextView; // Log TextView to display messages
+    private TextView logTextView, forgotPassword, createAccount;
     private EditText usernameEditText, passwordEditText;
     private Button loginButton;
 
@@ -27,6 +29,8 @@ public class LoginActivity extends Activity {
         usernameEditText = findViewById(R.id.username);
         passwordEditText = findViewById(R.id.password);
         loginButton = findViewById(R.id.login_button);
+        forgotPassword = findViewById(R.id.forgot_password);
+        createAccount = findViewById(R.id.create_account);
 
         // Set up login button click listener
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -38,8 +42,10 @@ public class LoginActivity extends Activity {
                 // Validate input
                 if (username.isEmpty() || password.isEmpty()) {
                     logTextView.setText("Error: Username or Password cannot be empty.");
+                    logTextView.setTextColor(ContextCompat.getColor(logTextView.getContext(), R.color.red));
                 } else if (username.equals("admin") && password.equals("password")) { // Dummy credentials
                     logTextView.setText("Login Successful!");
+                    logTextView.setTextColor(ContextCompat.getColor(logTextView.getContext(), R.color.green));
                     Toast.makeText(LoginActivity.this, "Welcome " + username, Toast.LENGTH_SHORT).show();
 
                     // Navigate to DashboardActivity
@@ -50,6 +56,18 @@ public class LoginActivity extends Activity {
                     logTextView.setText("Error: Invalid Username or Password.");
                 }
             }
+        });
+
+        forgotPassword.setOnClickListener(v -> {
+            // Navigate to Forgot Password Activity
+            Intent intent = new Intent(this, ForgotPasswordActivity.class);
+            startActivity(intent);
+        });
+
+        createAccount.setOnClickListener(v -> {
+            // Navigate to Create Account Activity
+            Intent intent = new Intent(this, CreateAccountActivity.class);
+            startActivity(intent);
         });
     }
 }

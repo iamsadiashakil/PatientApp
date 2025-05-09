@@ -19,6 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.ForgotPasswordActivity" />
+        <activity android:name=".activities.CreateAccountActivity" />
         <activity android:name=".activities.DashboardActivity" />
         <activity android:name=".activities.ProfileDetailsActivity" />
         <activity android:name=".activities.BloodPressureHistoryActivity" />
