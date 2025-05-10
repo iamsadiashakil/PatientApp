@@ -10,15 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.com.myhealthteam.patientapp.R;
 import java.com.myhealthteam.patientapp.adapters.VitalsHistoryAdapter;
 import java.com.myhealthteam.patientapp.models.VitalsRecord;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class BloodPressureHistoryActivity extends Activity {
+public class BloodOxygenHistoryActivity extends Activity {
 
     private RecyclerView recyclerView;
     private VitalsHistoryAdapter adapter;
-    private List<VitalsRecord> bloodPressureRecords;
+    private List<VitalsRecord> bloodOxygenRecords;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +33,18 @@ public class BloodPressureHistoryActivity extends Activity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize data
-        bloodPressureRecords = new ArrayList<>();
+        bloodOxygenRecords = new ArrayList<>();
         populateDummyData(); // Replace with actual data from a database or API
 
         // Set up adapter
-        adapter = new VitalsHistoryAdapter(bloodPressureRecords);
+        adapter = new VitalsHistoryAdapter(bloodOxygenRecords);
         recyclerView.setAdapter(adapter);
     }
 
     private void populateDummyData() {
-        bloodPressureRecords.add(new VitalsRecord("120/80 mmHg", "2025-04-29 10:30 AM", "Normal"));
-        bloodPressureRecords.add(new VitalsRecord("140/90 mmHg", "2025-04-28 08:15 AM", "High"));
-        bloodPressureRecords.add(new VitalsRecord("110/70 mmHg", "2025-04-27 09:45 PM", "Normal"));
-        bloodPressureRecords.add(new VitalsRecord("150/95 mmHg", "2025-04-26 07:20 AM", "High"));
+        bloodOxygenRecords.add(new VitalsRecord("97%", "2025-05-07 09:00 AM", "Normal"));
+        bloodOxygenRecords.add(new VitalsRecord("92%", "2025-05-06 06:30 PM", "Low"));
+        bloodOxygenRecords.add(new VitalsRecord("98%", "2025-05-05 03:15 PM", "Normal"));
+        bloodOxygenRecords.add(new VitalsRecord("89%", "2025-05-04 10:45 AM", "Low"));
     }
 }

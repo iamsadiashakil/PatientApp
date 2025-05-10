@@ -1,11 +1,11 @@
 package java.com.myhealthteam.patientapp.models;
 
-public class BloodPressureRecord {
+public class VitalsRecord {
     private String reading;
     private String measuredAt;
     private String status;
 
-    public BloodPressureRecord(String reading, String measuredAt, String status) {
+    public VitalsRecord(String reading, String measuredAt, String status) {
         this.reading = reading;
         this.measuredAt = measuredAt;
         this.status = status;

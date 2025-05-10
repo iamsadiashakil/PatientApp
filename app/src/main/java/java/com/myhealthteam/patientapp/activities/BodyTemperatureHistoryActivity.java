@@ -10,15 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.com.myhealthteam.patientapp.R;
 import java.com.myhealthteam.patientapp.adapters.VitalsHistoryAdapter;
 import java.com.myhealthteam.patientapp.models.VitalsRecord;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class BloodPressureHistoryActivity extends Activity {
+public class BodyTemperatureHistoryActivity extends Activity {
 
     private RecyclerView recyclerView;
     private VitalsHistoryAdapter adapter;
-    private List<VitalsRecord> bloodPressureRecords;
+    private List<VitalsRecord> bodyTemperatureRecords;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +33,19 @@ public class BloodPressureHistoryActivity extends Activity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize data
-        bloodPressureRecords = new ArrayList<>();
+        bodyTemperatureRecords = new ArrayList<>();
         populateDummyData(); // Replace with actual data from a database or API
 
         // Set up adapter
-        adapter = new VitalsHistoryAdapter(bloodPressureRecords);
+        adapter = new VitalsHistoryAdapter(bodyTemperatureRecords);
         recyclerView.setAdapter(adapter);
     }
 
     private void populateDummyData() {
-        bloodPressureRecords.add(new VitalsRecord("120/80 mmHg", "2025-04-29 10:30 AM", "Normal"));
-        bloodPressureRecords.add(new VitalsRecord("140/90 mmHg", "2025-04-28 08:15 AM", "High"));
-        bloodPressureRecords.add(new VitalsRecord("110/70 mmHg", "2025-04-27 09:45 PM", "Normal"));
-        bloodPressureRecords.add(new VitalsRecord("150/95 mmHg", "2025-04-26 07:20 AM", "High"));
+        bodyTemperatureRecords.add(new VitalsRecord("98.6°F", "2025-05-08 08:22 AM", "Normal"));
+        bodyTemperatureRecords.add(new VitalsRecord("101.5°F", "2025-05-07 10:00 PM", "Fever"));
+        bodyTemperatureRecords.add(new VitalsRecord("97.8°F", "2025-05-06 07:45 AM", "Normal"));
+        bodyTemperatureRecords.add(new VitalsRecord("102.3°F", "2025-05-05 05:30 PM", "Fever"));
+
     }
 }

@@ -8,44 +8,44 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.com.myhealthteam.patientapp.R;
+
 import java.com.myhealthteam.patientapp.adapters.VitalsHistoryAdapter;
 import java.com.myhealthteam.patientapp.models.VitalsRecord;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class BloodPressureHistoryActivity extends Activity {
+public class PulseRateHistoryActivity extends Activity {
 
     private RecyclerView recyclerView;
     private VitalsHistoryAdapter adapter;
-    private List<VitalsRecord> bloodPressureRecords;
+    private List<VitalsRecord> pulseRateRecords;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blood_pressure_history);
+        setContentView(R.layout.activity_pulse_rate_history);
 
         // Set up the top bar
         ImageView backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(v -> finish()); // Close activity on back button press
 
         // Setup RecyclerView
-        recyclerView = findViewById(R.id.blood_pressure_recycler_view);
+        recyclerView = findViewById(R.id.pulse_rate_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize data
-        bloodPressureRecords = new ArrayList<>();
+        pulseRateRecords = new ArrayList<>();
         populateDummyData(); // Replace with actual data from a database or API
 
         // Set up adapter
-        adapter = new VitalsHistoryAdapter(bloodPressureRecords);
+        adapter = new VitalsHistoryAdapter(pulseRateRecords);
         recyclerView.setAdapter(adapter);
     }
 
     private void populateDummyData() {
-        bloodPressureRecords.add(new VitalsRecord("120/80 mmHg", "2025-04-29 10:30 AM", "Normal"));
-        bloodPressureRecords.add(new VitalsRecord("140/90 mmHg", "2025-04-28 08:15 AM", "High"));
-        bloodPressureRecords.add(new VitalsRecord("110/70 mmHg", "2025-04-27 09:45 PM", "Normal"));
-        bloodPressureRecords.add(new VitalsRecord("150/95 mmHg", "2025-04-26 07:20 AM", "High"));
+        pulseRateRecords.add(new VitalsRecord("76 bpm", "2025-05-05 11:00 AM", "Normal"));
+        pulseRateRecords.add(new VitalsRecord("92 bpm", "2025-05-04 02:30 PM", "High"));
+        pulseRateRecords.add(new VitalsRecord("68 bpm", "2025-05-03 08:45 PM", "Normal"));
+        pulseRateRecords.add(new VitalsRecord("100 bpm", "2025-05-02 07:15 AM", "High"));
     }
 }

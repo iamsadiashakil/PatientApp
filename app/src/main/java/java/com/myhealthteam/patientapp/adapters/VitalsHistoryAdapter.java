@@ -10,15 +10,14 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.com.myhealthteam.patientapp.R;
-import java.com.myhealthteam.patientapp.models.BloodPressureRecord;
-
+import java.com.myhealthteam.patientapp.models.VitalsRecord;
 import java.util.List;
 
-public class BloodPressureHistoryAdapter extends RecyclerView.Adapter<BloodPressureHistoryAdapter.ViewHolder> {
+public class VitalsHistoryAdapter extends RecyclerView.Adapter<VitalsHistoryAdapter.ViewHolder> {
 
-    private List<BloodPressureRecord> records;
+    private List<VitalsRecord> records;
 
-    public BloodPressureHistoryAdapter(List<BloodPressureRecord> records) {
+    public VitalsHistoryAdapter(List<VitalsRecord> records) {
         this.records = records;
     }
 
@@ -26,13 +25,13 @@ public class BloodPressureHistoryAdapter extends RecyclerView.Adapter<BloodPress
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_blood_pressure_record, parent, false);
+                .inflate(R.layout.item_blood_pressure, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        BloodPressureRecord record = records.get(position);
+        VitalsRecord record = records.get(position);
         holder.reading.setText(record.getReading());
         holder.measuredAt.setText(record.getMeasuredAt());
         holder.status.setText(record.getStatus());
@@ -40,7 +39,8 @@ public class BloodPressureHistoryAdapter extends RecyclerView.Adapter<BloodPress
         // Change the status text color dynamically
         if (record.getStatus().equalsIgnoreCase("Normal")) {
             holder.status.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.green));
-        } else if (record.getStatus().equalsIgnoreCase("High")) {
+        } else if (record.getStatus().equalsIgnoreCase("High") ||
+                record.getStatus().equalsIgnoreCase("Fever")) {
             holder.status.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.red));
         }
     }

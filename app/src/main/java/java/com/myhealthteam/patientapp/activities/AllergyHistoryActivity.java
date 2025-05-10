@@ -8,44 +8,43 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.com.myhealthteam.patientapp.R;
-import java.com.myhealthteam.patientapp.adapters.VitalsHistoryAdapter;
-import java.com.myhealthteam.patientapp.models.VitalsRecord;
+import java.com.myhealthteam.patientapp.adapters.AllergyHistoryAdapter;
+import java.com.myhealthteam.patientapp.models.AllergyRecord;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BloodPressureHistoryActivity extends Activity {
+public class AllergyHistoryActivity extends Activity {
 
     private RecyclerView recyclerView;
-    private VitalsHistoryAdapter adapter;
-    private List<VitalsRecord> bloodPressureRecords;
+    private AllergyHistoryAdapter adapter;
+    private List<AllergyRecord> allergyRecords;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blood_pressure_history);
+        setContentView(R.layout.activity_allergy_history);
 
         // Set up the top bar
         ImageView backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(v -> finish()); // Close activity on back button press
 
         // Setup RecyclerView
-        recyclerView = findViewById(R.id.blood_pressure_recycler_view);
+        recyclerView = findViewById(R.id.allergy_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize data
-        bloodPressureRecords = new ArrayList<>();
+        allergyRecords = new ArrayList<>();
         populateDummyData(); // Replace with actual data from a database or API
 
         // Set up adapter
-        adapter = new VitalsHistoryAdapter(bloodPressureRecords);
+        adapter = new AllergyHistoryAdapter(allergyRecords);
         recyclerView.setAdapter(adapter);
     }
 
     private void populateDummyData() {
-        bloodPressureRecords.add(new VitalsRecord("120/80 mmHg", "2025-04-29 10:30 AM", "Normal"));
-        bloodPressureRecords.add(new VitalsRecord("140/90 mmHg", "2025-04-28 08:15 AM", "High"));
-        bloodPressureRecords.add(new VitalsRecord("110/70 mmHg", "2025-04-27 09:45 PM", "Normal"));
-        bloodPressureRecords.add(new VitalsRecord("150/95 mmHg", "2025-04-26 07:20 AM", "High"));
+        allergyRecords.add(new AllergyRecord("Penicillin", "Drug", "Severe", "Anaphylaxis", "Mar 12, 2022"));
+        allergyRecords.add(new AllergyRecord("Pollen (Seasonal)", "Environmental", "Moderate", "Sneezing, Watery Eyes", "Apr 02, 2023"));
+        allergyRecords.add(new AllergyRecord("Peanuts", "Food", "Severe", "Swelling, Hives", "Jun 20, 2021"));
     }
 }

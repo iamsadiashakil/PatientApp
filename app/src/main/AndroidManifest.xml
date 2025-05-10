@@ -23,6 +23,11 @@
         <activity android:name=".activities.CreateAccountActivity" />
         <activity android:name=".activities.DashboardActivity" />
         <activity android:name=".activities.BloodPressureHistoryActivity" />
+        <activity android:name=".activities.AllergyHistoryActivity" />
+        <activity android:name=".activities.BloodOxygenHistoryActivity" />
+        <activity android:name=".activities.BodyTemperatureHistoryActivity" />
+        <activity android:name=".activities.PulseRateHistoryActivity" />
+        <activity android:name=".activities.SugarLevelHistoryActivity" />
         <activity android:name=".activities.ProfileDetailsActivity" />
         <activity android:name=".activities.EditProfileActivity" />
         <activity android:name=".activities.ChatScreenActivity" />
