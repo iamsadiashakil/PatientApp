@@ -94,7 +94,7 @@
                         android:id="@+id/caretaker_details"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Relationship: Sister\nDOB: 12/01/1994      |      Age: 34\nGender: Female"
+                        android:text="Relationship: Sibling\nDOB: 12/01/1994      |      Age: 34\nGender: Female"
                         android:textSize="14sp"
                         android:lineSpacingExtra="4dp"
                         android:textColor="#757575"
