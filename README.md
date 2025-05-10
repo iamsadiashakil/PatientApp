@@ -44,6 +44,10 @@ The **Patient App** is a healthcare management application designed to assist ca
 <img src="https://github.com/user-attachments/assets/e355fe55-c78b-4668-9c37-f46109237f99" alt="Dashboard Screen" width="250"/>
 <img src="https://github.com/user-attachments/assets/067a6bdf-e047-480f-9865-f1b27d54d2c7" alt="Blood Pressure History Screen" width="250"/>
 <img src="https://github.com/user-attachments/assets/4ee869b1-b94c-44a5-8134-363cdbb6f106" alt="Allergy History Screen" width="250"/>
+<img src="https://github.com/user-attachments/assets/17cf75e8-b9f1-4e2e-9889-2f54b81e606e" alt="Pulse Rate History Screen" width="250"/>
+<img src="https://github.com/user-attachments/assets/cb99d1bd-9738-4346-b4d6-8c9376a863fc" alt="Sugar Level History Screen" width="250"/>
+<img src="https://github.com/user-attachments/assets/7df26a17-187b-4e7f-a435-4fc262c6d670" alt="Blood Oxygen History Screen" width="250"/>
+<img src="https://github.com/user-attachments/assets/f397ed8d-8b17-484a-99d4-f83a9ff0d489" alt="Body Temperature History Screen" width="250"/>
 
 ### Messaging
 <img src="https://github.com/user-attachments/assets/d985732a-f51c-4fed-bd77-27f67244ec1c" alt="Chat Screen" width="250"/>
