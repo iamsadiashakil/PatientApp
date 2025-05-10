@@ -11,12 +11,12 @@ import java.com.myhealthteam.patientapp.models.Chat;
 
 import java.util.List;
 
-public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ChatViewHolder> {
+public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder> {
 
     private final List<Chat> chatList;
     private final OnChatClickListener listener;
 
-    public ChatListAdapter(List<Chat> chatList, OnChatClickListener listener) {
+    public ChatAdapter(List<Chat> chatList, OnChatClickListener listener) {
         this.chatList = chatList;
         this.listener = listener;
     }
@@ -24,7 +24,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ChatVi
     @NonNull
     @Override
     public ChatViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chat_list, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chat, parent, false);
         return new ChatViewHolder(view);
     }
 

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.com.myhealthteam.patientapp.R;
-import java.com.myhealthteam.patientapp.adapters.ChatListAdapter;
+import java.com.myhealthteam.patientapp.adapters.ChatAdapter;
 import java.com.myhealthteam.patientapp.models.Chat;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class ChatScreenActivity extends Activity {
 
     private RecyclerView chatListRecyclerView;
     private FloatingActionButton fabNewChat;
-    private ChatListAdapter chatListAdapter;
+    private ChatAdapter chatAdapter;
     private List<Chat> chatList;
 
     @Override
@@ -38,16 +38,16 @@ public class ChatScreenActivity extends Activity {
 
         // Set up RecyclerView
         chatList = getChatList(); // Fetch chat list (mock or API call)
-        chatListAdapter = new ChatListAdapter(chatList, this::openChat);
+        chatAdapter = new ChatAdapter(chatList, this::openChat);
         chatListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        chatListRecyclerView.setAdapter(chatListAdapter);
+        chatListRecyclerView.setAdapter(chatAdapter);
 
         // FAB click listener
-        /*fabNewChat.setOnClickListener(v -> {
+        fabNewChat.setOnClickListener(v -> {
             // Open New Chat Screen
             Intent intent = new Intent(ChatScreenActivity.this, NewChatActivity.class);
             startActivity(intent);
-        });*/
+        });
     }
 
     // Open chat with the selected doctor

@@ -26,6 +26,7 @@
         <activity android:name=".activities.ProfileDetailsActivity" />
         <activity android:name=".activities.EditProfileActivity" />
         <activity android:name=".activities.ChatScreenActivity" />
+        <activity android:name=".activities.NewChatActivity" />
         <activity android:name=".activities.ChatDetailActivity" />
     </application>
 

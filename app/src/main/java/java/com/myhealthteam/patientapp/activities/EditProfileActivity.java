@@ -1,6 +1,7 @@
 package java.com.myhealthteam.patientapp.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -67,6 +68,10 @@ public class EditProfileActivity extends Activity {
 
             // Add logic to save updated profile data (e.g., update database or API call)
             Toast.makeText(this, "Profile updated successfully!", Toast.LENGTH_SHORT).show();
+            // Navigate to ProfileDetailsActivity
+            Intent intent = new Intent(EditProfileActivity.this, ProfileDetailsActivity.class);
+            startActivity(intent);
+            finish(); // Close EditProfileActivity
         });
 
         backButton.setOnClickListener(v -> {
