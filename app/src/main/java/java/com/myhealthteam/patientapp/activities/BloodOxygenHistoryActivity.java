@@ -22,14 +22,14 @@ public class BloodOxygenHistoryActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blood_pressure_history);
+        setContentView(R.layout.activity_blood_oxygen_history);
 
         // Set up the top bar
         ImageView backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(v -> finish()); // Close activity on back button press
 
         // Setup RecyclerView
-        recyclerView = findViewById(R.id.blood_pressure_recycler_view);
+        recyclerView = findViewById(R.id.blood_oxygen_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Initialize data
