@@ -15,7 +15,7 @@ import java.com.myhealthteam.patientapp.R;
 public class DashboardActivity extends Activity {
 
     private CardView cardBloodPressure, cardPulseRate, cardSugarLevel;
-    private CardView cardBodyTemp, cardOxygenLevel, cardAllergies, cardMessageDoctor;
+    private CardView cardBodyTemp, cardOxygenLevel, cardAllergies;
     private TextView bloodPressureReading, pulseRateReading, sugarLevelReading;
     private TextView bodyTempReading, oxygenLevelReading, allergiesReading;
     private ImageView profileIcon;
@@ -29,17 +29,16 @@ public class DashboardActivity extends Activity {
         cardBloodPressure = findViewById(R.id.cardBloodPressure);
         cardPulseRate = findViewById(R.id.cardPulseRate);
         cardSugarLevel = findViewById(R.id.cardSugarLevel);
-       /* cardBodyTemp = findViewById(R.id.cardBodyTemp);
-        cardOxygenLevel = findViewById(R.id.cardOxygenLevel);
+        cardBodyTemp = findViewById(R.id.cardBodyTemperature);
+        cardOxygenLevel = findViewById(R.id.cardBloodOxygen);
         cardAllergies = findViewById(R.id.cardAllergies);
-        cardMessageDoctor = findViewById(R.id.cardMessageDoctor);*/
 
         bloodPressureReading = findViewById(R.id.bloodPressureReading);
-        /*pulseRateReading = findViewById(R.id.pulseRateReading);
+        pulseRateReading = findViewById(R.id.pulseReading);
         sugarLevelReading = findViewById(R.id.sugarLevelReading);
-        bodyTempReading = findViewById(R.id.bodyTempReading);
-        oxygenLevelReading = findViewById(R.id.oxygenLevelReading);
-        allergiesReading = findViewById(R.id.allergiesReading);*/
+        bodyTempReading = findViewById(R.id.bodyTemperatureReading);
+        oxygenLevelReading = findViewById(R.id.bloodOxygenReading);
+        allergiesReading = findViewById(R.id.allergyValue);
 
         profileIcon = findViewById(R.id.profile_icon);
 
@@ -47,11 +46,11 @@ public class DashboardActivity extends Activity {
 
         // Sample Data: You can fetch real data later from API or database
         bloodPressureReading.setText("118/79 mmHg");
-       /* pulseRateReading.setText("72 bpm");
+        pulseRateReading.setText("72 bpm");
         sugarLevelReading.setText("95 mg/dL");
         bodyTempReading.setText("98.4 °F");
-        oxygenLevelReading.setText("97 % SpO₂");
-        allergiesReading.setText("Peanut Allergy");*/
+        oxygenLevelReading.setText("97 %");
+        allergiesReading.setText("Peanut");
 
         // Click listeners
         // Handle profile icon click
@@ -68,16 +67,40 @@ public class DashboardActivity extends Activity {
             }
         });
 
-       /* cardPulseRate.setOnClickListener(new View.OnClickListener() {
+        cardPulseRate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(DashboardActivity.this, PulseRateHistoryActivity.class));
             }
-        });*/
+        });
 
+        cardAllergies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DashboardActivity.this, AllergyHistoryActivity.class));
+            }
+        });
 
-        // Similarly for other cards
+        cardOxygenLevel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DashboardActivity.this, BloodOxygenHistoryActivity.class));
+            }
+        });
 
+        cardBodyTemp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DashboardActivity.this, BodyTemperatureHistoryActivity.class));
+            }
+        });
+
+        cardSugarLevel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DashboardActivity.this, SugarLevelHistoryActivity.class));
+            }
+        });
 
         fabChat.setOnClickListener(view -> {
             // Navigate to the ChatActivity
