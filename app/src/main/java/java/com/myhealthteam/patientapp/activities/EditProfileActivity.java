@@ -52,6 +52,12 @@ public class EditProfileActivity extends Activity {
         // Set the adapter to the Spinner
         relationshipSpinner.setAdapter(adapter);
 
+        // Set default selection to "Sibling"
+        int siblingIndex = adapter.getPosition("Sibling");
+        if (siblingIndex >= 0) {
+            relationshipSpinner.setSelection(siblingIndex);
+        }
+
         // Save changes action
         saveChangesButton.setOnClickListener(v -> {
             String updatedName = fullName.getText().toString().trim();
