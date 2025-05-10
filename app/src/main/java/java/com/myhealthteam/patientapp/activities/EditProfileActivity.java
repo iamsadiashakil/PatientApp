@@ -29,8 +29,8 @@ public class EditProfileActivity extends Activity {
         Button saveChangesButton = findViewById(R.id.save_changes_button);
 
         // Mock existing user data (replace with actual user data retrieval logic)
-        fullName.setText("John Doe");
-        email.setText("johndoe@example.com");
+        fullName.setText("Emma Johnson");
+        email.setText("emma.jm@example.com");
         phoneNumber.setText("+1234567890");
         dob.setText("12/01/1994");
 
