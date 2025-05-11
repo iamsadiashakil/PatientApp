@@ -2,10 +2,28 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="_device_class_phone" />
+        <device id="Nexus 6P" />
+      </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_allergy_history.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_blood_oxygen_history.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_blood_pressure_history.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_body_temperature_history.xml">
         <config>
           <theme>@style/Theme.PatientApp</theme>
         </config>
@@ -20,7 +38,22 @@
           <theme>@style/Theme.PatientApp</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profile.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml">
         <config>
           <theme>@style/Theme.PatientApp</theme>
         </config>
@@ -30,17 +63,52 @@
           <theme>@style/Theme.PatientApp</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_new_chat.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile_details.xml">
         <config>
           <theme>@style/Theme.PatientApp</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_blood_pressure_record.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pulse_rate_history.xml">
         <config>
           <theme>@style/Theme.PatientApp</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_chat_list.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sugar_level_history.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_allergies.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_blood_oxygen.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_blood_pressure.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_body_temperature.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_chat.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_doctor_directory.xml">
         <config>
           <theme>@style/Theme.PatientApp</theme>
         </config>
@@ -55,13 +123,37 @@
           <theme>@style/Theme.PatientApp</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_pulse_rate.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_sugar_level.xml">
+        <config>
+          <theme>@style/Theme.PatientApp</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b2052fd-4a55-4e2b-b225-b1124a18e0db" name="Changes" comment="" />
+    <list default="true" id="1b2052fd-4a55-4e2b-b225-b1124a18e0db" name="Changes" comment="Added Other dashboard tiles history functionality">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientApp/app/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PatientApp/app/.gitignore" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +161,9 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/macbook/.android/avd/Pixel_7a.avd)]" />
   <component name="ExternalProjectsData">
@@ -81,12 +176,7 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Patient App" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -98,8 +188,8 @@
       <list>
         <option value="layoutResourceFile_vertical" />
         <option value="valueResourceFile" />
-        <option value="layoutResourceFile" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -107,10 +197,12 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feature/new-chat-btn" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -124,8 +216,9 @@
     &quot;accountId&quot;: &quot;f4021dc4-26cc-45c2-a0bd-70c94479b9bd&quot;
   }
 }</component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.3.12_1/bin/php" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -145,16 +238,23 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "ScreenshotViewer.SavePath": "/Users/macbook/Desktop",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/macbook/Desktop/PatientApp",
+    "last_opened_file_path": "/Users/macbook/MyDevelopment/PatientApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Dependencies",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="PsdUISettings">
@@ -163,8 +263,20 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="java.com.myhealthteam.patientapp.models" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/res" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="java.com.myhealthteam.patientapp.adapters" />
+      <recent name="java.com.myhealthteam.patientapp.activities" />
+      <recent name="java.com.myhealthteam.patientapp.models" />
     </key>
   </component>
   <component name="RunManager">
@@ -241,6 +353,13 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -249,20 +368,158 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745580818129</updated>
+      <workItem from="1746803331216" duration="427000" />
     </task>
+    <task id="LOCAL-00001" summary="modified ui of new chat">
+      <option name="closed" value="true" />
+      <created>1746221941081</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746221941081</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added .gitattributes file">
+      <option name="closed" value="true" />
+      <created>1746638906786</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746638906787</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added .gitattributes file">
+      <option name="closed" value="true" />
+      <created>1746639156204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746639156204</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Modified dashboard layout">
+      <option name="closed" value="true" />
+      <created>1746781490959</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746781490959</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added forgot password and Create Account functionality">
+      <option name="closed" value="true" />
+      <created>1746799889215</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746799889215</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Edit profile functionality">
+      <option name="closed" value="true" />
+      <created>1746803265019</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746803265019</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added New Chat functionality">
+      <option name="closed" value="true" />
+      <created>1746873623412</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746873623412</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added Other dashboard tiles history functionality">
+      <option name="closed" value="true" />
+      <created>1746902612997</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746902612997</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added Other dashboard tiles history functionality">
+      <option name="closed" value="true" />
+      <created>1746902624002</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746902624002</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added Other dashboard tiles history functionality">
+      <option name="closed" value="true" />
+      <created>1746903732431</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746903732431</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added Other dashboard tiles history functionality">
+      <option name="closed" value="true" />
+      <created>1746904220452</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746904220453</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added Other dashboard tiles history functionality">
+      <option name="closed" value="true" />
+      <created>1746904560658</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746904560658</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added Other dashboard tiles history functionality">
+      <option name="closed" value="true" />
+      <created>1746904631640</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746904631640</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added Other dashboard tiles history functionality">
+      <option name="closed" value="true" />
+      <created>1746905522619</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746905522619</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modified ui of new chat" />
+    <MESSAGE value="Added .gitattributes file" />
+    <MESSAGE value="Modified dashboard layout" />
+    <MESSAGE value="Added forgot password and Create Account functionality" />
+    <MESSAGE value="Added Edit profile functionality" />
+    <MESSAGE value="Added New Chat functionality" />
+    <MESSAGE value="Added Other dashboard tiles history functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Other dashboard tiles history functionality" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="java.com.myhealthteam.patientapp">
           <value>
-            <CheckInfo lastCheckTimestamp="1746162092829" />
+            <CheckInfo lastCheckTimestamp="1746883353830" />
           </value>
         </entry>
         <entry key="java.com.myhealthteam.patientapp.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1746162092828" />
+            <CheckInfo lastCheckTimestamp="1746883353831" />
           </value>
         </entry>
       </map>

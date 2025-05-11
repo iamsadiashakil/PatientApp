@@ -2,7 +2,6 @@
 .gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
-.gradle/
 **/build/
 *.lock
 !gradle-wrapper.jar
@@ -52,18 +51,16 @@ Desktop.ini
 *.aab
 
 # IntelliJ IDEA
-.idea/
+
 *.iws
 *.ipr
-*.iml
+
 
 # Logs
-*.log
+
 
 # Temporary files
-*.tmp
-*.temp
-*.swp
+
 
 # Crashlytics
 crashlytics-build.properties
@@ -79,5 +76,42 @@ fastlane/screenshots
 
 # Test results
 *.out
-*.log
 *.pyc
+
+
+
+# Gradle files
+
+
+# Local configuration file (sdk path, etc.)
+
+
+# Log files
+
+
+# Android Studio Specific
+
+
+# Keystore files
+
+
+# Dependency directories
+/.gradle/
+
+/build/
+/app/build/
+
+# Compiled Java files
+
+
+# Generated files
+.gen/
+bin/
+gen/
+
+# Other files
+
+*.swo
+
+
+# Exclude APKs
