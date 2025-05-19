@@ -139,7 +139,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b2052fd-4a55-4e2b-b225-b1124a18e0db" name="Changes" comment="Modified dependencies" />
+    <list default="true" id="1b2052fd-4a55-4e2b-b225-b1124a18e0db" name="Changes" comment="Modified dependencies">
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/spinner_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/spinner_background.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
