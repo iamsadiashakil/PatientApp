@@ -28,7 +28,7 @@
         <activity android:name=".activities.BodyTemperatureHistoryActivity" />
         <activity android:name=".activities.PulseRateHistoryActivity" />
         <activity android:name=".activities.SugarLevelHistoryActivity" />
-        <activity android:name=".activities.ProfileDetailsActivity" />
+        <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.EditProfileActivity" />
         <activity android:name=".activities.ChatScreenActivity" />
         <activity android:name=".activities.NewChatActivity" />

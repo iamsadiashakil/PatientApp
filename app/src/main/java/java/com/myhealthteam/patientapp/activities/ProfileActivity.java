@@ -8,12 +8,12 @@ import android.widget.ImageView;
 
 import java.com.myhealthteam.patientapp.R;
 
-public class ProfileDetailsActivity extends Activity {
+public class ProfileActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_details);
+        setContentView(R.layout.activity_profile);
 
         // Back button functionality
         ImageView backButton = findViewById(R.id.back_button);
@@ -23,7 +23,7 @@ public class ProfileDetailsActivity extends Activity {
         Button logoutButton = findViewById(R.id.logout_button);
         logoutButton.setOnClickListener(v -> {
             // Handle logout logic here (e.g., clear session, navigate to login screen)
-            Intent intent = new Intent(ProfileDetailsActivity.this, LoginActivity.class);
+            Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear activity stack
             startActivity(intent);
             finish();
@@ -31,7 +31,7 @@ public class ProfileDetailsActivity extends Activity {
 
         ImageView editButton = findViewById(R.id.edit_profile_button);
         editButton.setOnClickListener(v -> {
-            Intent intent = new Intent(ProfileDetailsActivity.this, EditProfileActivity.class);
+            Intent intent = new Intent(ProfileActivity.this, EditProfileActivity.class);
             startActivity(intent);
         });
     }

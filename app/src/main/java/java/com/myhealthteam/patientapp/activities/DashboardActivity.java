@@ -56,7 +56,7 @@ public class DashboardActivity extends Activity {
         // Handle profile icon click
         profileIcon.setOnClickListener(v -> {
             // Navigate to ProfileDetailsActivity
-            Intent intent = new Intent(DashboardActivity.this, ProfileDetailsActivity.class);
+            Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
             startActivity(intent);
         });
 

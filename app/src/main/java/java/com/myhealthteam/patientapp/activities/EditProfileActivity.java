@@ -75,7 +75,7 @@ public class EditProfileActivity extends Activity {
             // Add logic to save updated profile data (e.g., update database or API call)
             Toast.makeText(this, "Profile updated successfully!", Toast.LENGTH_SHORT).show();
             // Navigate to ProfileDetailsActivity
-            Intent intent = new Intent(EditProfileActivity.this, ProfileDetailsActivity.class);
+            Intent intent = new Intent(EditProfileActivity.this, ProfileActivity.class);
             startActivity(intent);
             finish(); // Close EditProfileActivity
         });
