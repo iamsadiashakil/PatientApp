@@ -1,117 +1,20 @@
-# Gradle
-.gradle/
 build/
-!gradle/wrapper/gradle-wrapper.jar
-**/build/
-*.lock
-!gradle-wrapper.jar
-/:q
-/:q.pub
-# Java
-*.class
-*.jar
-*.war
-*.ear
-
-# Android Studio
-.idea/
-*.iml
-*.hprof
+local.properties
 *.log
-*.bak
-*.orig
-*.swp
-*.tmp
-*.temp
-*.DS_Store
 
-# Keystore files
-*.jks
+*.apk
 *.keystore
 
-# Local configuration files
-local.properties
-*.pro.user
-*.pro.user.lock
-*.userprefs
-
-# Mac OS
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Mobile-specific
-*.apk
-*.ap_
-*.aab
-
-# IntelliJ IDEA
-
-*.iws
-*.ipr
-
-
-# Logs
-
-
-# Temporary files
-
-
-# Crashlytics
-crashlytics-build.properties
-fabric.properties
-
-# Firebase
-google-services.json
-
-# Fastlane
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-
-# Test results
-*.out
-*.pyc
-
-
-
 # Gradle files
+.gradle/
 
 
-# Local configuration file (sdk path, etc.)
+# IntelliJ/Android Studio
+.idea
+.idea/
+.idea/*
+*.iml
 
 
-# Log files
-
-
-# Android Studio Specific
-
-
-# Keystore files
-
-
-# Dependency directories
-/.gradle/
-
-/build/
-/app/build/
-
-# Compiled Java files
-
-
-# Generated files
-.gen/
-bin/
-gen/
-
-# Other files
-
-*.swo
-
-
-# Exclude APKs
+# ProGuard
+proguard/
