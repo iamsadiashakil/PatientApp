@@ -1,10 +1,10 @@
 # Patient App
 
-The **Patient App** is a healthcare management application designed to assist caretakers in managing the health and well-being of their patients. The app enables caretakers to seamlessly communicate with healthcare professionals and access medical records, ensuring that patients receive the best possible care.
+The **Patient App** is a healthcare management application designed to assist Patient’s Healthcare Representative in managing the health and well-being of their patients. The app enables Healthcare Representatives to seamlessly communicate with healthcare professionals and access medical records, ensuring that patients receive the best possible care.
 
 ## Features
 
-- **Secure Messaging**: Communicate directly with healthcare providers for updates and assistance.
+- **Secure Messaging**: Communicate directly with healthcare professionals for updates and assistance.
 - **Medical Records Access**: View patient vitals, test results, and the patient's complete medical history.
 - **User-Friendly Interface**: A clean and intuitive design tailored for caretakers to manage patient information efficiently.
 
