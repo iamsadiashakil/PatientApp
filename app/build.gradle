@@ -58,4 +58,33 @@ dependencies {
     androidTestImplementation libs.androidx.espresso.core
     androidTestImplementation platform(libs.androidx.compose.bom)
     androidTestImplementation libs.androidx.ui.test.junit4
+    // Retrofit for network calls
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+
+    // OkHttp for HTTP client
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging.interceptor)
+
+    // Lifecycle components for ViewModel and LiveData
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+
+    // Coroutines for asynchronous programming
+    implementation(libs.kotlinx.coroutines.android)
+
+    // Encrypted SharedPreferences for secure token storage
+    implementation(libs.androidx.security.crypto)
+
+    // Glide for image loading (if needed)
+    implementation(libs.glide)
+    annotationProcessor libs.glide.compiler
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
+    // If using tests
+    testCompileOnly 'org.projectlombok:lombok:1.18.32'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
 }
