@@ -2,6 +2,7 @@ package com.myhealthteam.patientapp.network;
 
 import com.myhealthteam.patientapp.models.*;
 
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -17,6 +18,12 @@ public interface ApiService {
     @POST("api/auth/login")
     Call<AuthResponse> login(@Body AuthRequest request);
 
+    @GET("api/proxies/patient/vitals-summary")
+    Call<VitalsSummaryDto> getVitalsSummary(@Header("Authorization") String token);
+
+    @GET("api/proxies/patient/allergies")
+    Call<List<AllergyDto>> getAllergies(@Header("Authorization") String token);
+
     /*@POST("api/auth/register")
     Call<AuthResponse> register(@Body RegistrationRequest request);
 
@@ -29,8 +36,7 @@ public interface ApiService {
     @GET("api/proxies/patient")
     Call<Patient> getAssignedPatient(@Header("Authorization") String token);
 
-    @GET("api/proxies/patient/vitals-summary")
-    Call<Map<String, String>> getVitalsSummary(@Header("Authorization") String token);
+
 
     @GET("api/patients/{patientId}/allergies")
     Call<List<AllergyRecord>> getAllergies(@Path("patientId") Long patientId,

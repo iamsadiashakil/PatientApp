@@ -52,6 +52,13 @@ public class LoginActivity extends Activity {
         // Get API instance from RetrofitClient
         apiService = RetrofitClient.getInstance();
 
+        /*// Check if user is already logged in
+        if (sharedPreferences.contains("auth_token")) {
+            navigateToDashboard();
+            return;
+        }*/
+
+
         // Set click listener for login button
         loginButton.setOnClickListener(v -> loginUser());
 
