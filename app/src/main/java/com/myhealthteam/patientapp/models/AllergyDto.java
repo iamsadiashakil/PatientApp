@@ -1,8 +1,10 @@
 package com.myhealthteam.patientapp.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class AllergyDto {
     private Long id;
 

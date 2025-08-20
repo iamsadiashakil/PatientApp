@@ -7,23 +7,25 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.cardview.widget.CardView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import com.myhealthteam.patientapp.R;
 import com.myhealthteam.patientapp.models.AllergyDto;
 import com.myhealthteam.patientapp.models.VitalDto;
 import com.myhealthteam.patientapp.models.VitalsSummaryDto;
 import com.myhealthteam.patientapp.network.ApiService;
 import com.myhealthteam.patientapp.network.RetrofitClient;
+import com.myhealthteam.patientapp.utils.MockDataGenerator;
 
 import java.util.Comparator;
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import android.widget.Toast;
 
 public class DashboardActivity extends Activity {
 
@@ -102,24 +104,36 @@ public class DashboardActivity extends Activity {
             public void onResponse(Call<VitalsSummaryDto> call, Response<VitalsSummaryDto> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     VitalsSummaryDto vitals = response.body();
-                    VitalDto bloodPressure = vitals.getLatestReadings().get("Blood Pressure");
-                    bloodPressureReading.setText(bloodPressure.getReading());
-                    VitalDto pulseRate = vitals.getLatestReadings().get("Pulse Rate");
-                    pulseRateReading.setText(pulseRate.getReading());
-                    VitalDto sugarLevel = vitals.getLatestReadings().get("Sugar Level");
-                    sugarLevelReading.setText(sugarLevel.getReading());
-                    VitalDto bodyTemperature = vitals.getLatestReadings().get("Body Temperature");
-                    bodyTempReading.setText(bodyTemperature.getReading());
-                    VitalDto bloodOxygen = vitals.getLatestReadings().get("Blood Oxygen");
-                    oxygenLevelReading.setText(bloodOxygen.getReading());
+                    updateVitalsUI(vitals);
+                } else {
+                    showMockVitals(Toast.LENGTH_LONG);
                 }
             }
 
             @Override
             public void onFailure(Call<VitalsSummaryDto> call, Throwable t) {
-                Toast.makeText(DashboardActivity.this, "Failed to load vitals", Toast.LENGTH_SHORT).show();
+                showMockVitals(Toast.LENGTH_SHORT);
             }
         });
+    }
+
+    private void showMockVitals(int lengthLong) {
+        Toast.makeText(DashboardActivity.this, "Showing mock vitals - connection issue", lengthLong).show();
+        VitalsSummaryDto vitalsMockData = MockDataGenerator.getVitalsMockData();
+        updateVitalsUI(vitalsMockData);
+    }
+
+    private void updateVitalsUI(VitalsSummaryDto vitals) {
+        VitalDto bloodPressure = vitals.getLatestReadings().get("Blood Pressure");
+        bloodPressureReading.setText(bloodPressure.getReading());
+        VitalDto pulseRate = vitals.getLatestReadings().get("Pulse Rate");
+        pulseRateReading.setText(pulseRate.getReading());
+        VitalDto sugarLevel = vitals.getLatestReadings().get("Sugar Level");
+        sugarLevelReading.setText(sugarLevel.getReading());
+        VitalDto bodyTemperature = vitals.getLatestReadings().get("Body Temperature");
+        bodyTempReading.setText(bodyTemperature.getReading());
+        VitalDto bloodOxygen = vitals.getLatestReadings().get("Blood Oxygen");
+        oxygenLevelReading.setText(bloodOxygen.getReading());
     }
 
     private void loadAllergies() {
@@ -128,16 +142,25 @@ public class DashboardActivity extends Activity {
             public void onResponse(Call<List<AllergyDto>> call, Response<List<AllergyDto>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<AllergyDto> allergies = response.body();
-                    AllergyDto allergy =allergies.stream().max(Comparator.comparing(AllergyDto::getNotedOn)).get();
+                    AllergyDto allergy = allergies.stream().max(Comparator.comparing(AllergyDto::getNotedOn)).get();
                     allergiesReading.setText(allergy.getName());
+                } else {
+                    showMockAllergy(Toast.LENGTH_LONG);
                 }
             }
 
             @Override
             public void onFailure(Call<List<AllergyDto>> call, Throwable t) {
-                Toast.makeText(DashboardActivity.this, "Failed to load allergies", Toast.LENGTH_SHORT).show();
+                showMockAllergy(Toast.LENGTH_SHORT);
             }
         });
+    }
+
+    private void showMockAllergy(int lengthLong) {
+        Toast.makeText(DashboardActivity.this, "Showing mock allergy - connection issue", lengthLong).show();
+        List<AllergyDto> allergies = MockDataGenerator.getAllergyMockData();
+        AllergyDto allergy = allergies.stream().max(Comparator.comparing(AllergyDto::getNotedOn)).get();
+        allergiesReading.setText(allergy.getName());
     }
 
 }

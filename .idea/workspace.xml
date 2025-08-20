@@ -139,10 +139,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b2052fd-4a55-4e2b-b225-b1124a18e0db" name="Changes" comment="Integrated login endpoint">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/models/AllergyDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/models/VitalDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/models/VitalsSummaryDto.java" afterDir="false" />
+    <list default="true" id="1b2052fd-4a55-4e2b-b225-b1124a18e0db" name="Changes" comment="Integrated dashboard endpoint">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/utils/MockDataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -151,8 +149,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/DashboardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/DashboardActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/network/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/network/ApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/models/AllergyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/models/AllergyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/models/VitalDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/models/VitalDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -676,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755702803023</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Integrated dashboard endpoint">
+      <option name="closed" value="true" />
+      <created>1755717400056</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1755717400057</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,40 +711,26 @@
     <MESSAGE value="Added test class for ProfileActivity" />
     <MESSAGE value="Modified .gitignore" />
     <MESSAGE value="Integrated login endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrated login endpoint" />
+    <MESSAGE value="Integrated dashboard endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrated dashboard endpoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/DashboardActivity.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/DashboardActivity.java</url>
-          <line>132</line>
+          <line>141</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/DashboardActivity.java</url>
-          <line>140</line>
+          <line>149</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/DashboardActivity.java</url>
-          <line>121</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/DashboardActivity.java</url>
-          <line>131</line>
+          <line>140</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/myhealthteam/patientapp/activities/DashboardActivity.java</url>
-          <line>104</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
